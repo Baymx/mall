@@ -31,7 +31,7 @@ export default class Rotation extends Component {
     ];
     return (
       <div>
-        <Slider arrowSize="large" autoplay="true" lazyLoad="true" arrows="false">
+        <Slider arrowSize="large" autoplay={true} lazyLoad={true} arrows={false} autoplaySpeed={30000}>
           {bigSlides.map((item, index) => (
             <div key={index} className="slider-img-wrapper">
               <img src={item.url} alt={item.text} />

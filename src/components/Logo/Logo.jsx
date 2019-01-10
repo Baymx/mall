@@ -20,7 +20,7 @@ export default class Logo extends Component {
       >
         <a href="/" style={{ display: 'block', position: 'relative' }}>
           {/* <img src={logo} width="129" height="35" alt="logo" /> */}
-                <svg fill="#ffffff" version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="125px" height="24px" viewBox="17.318 5.824 402.048 73.556" enable-background="new 17.318 5.824 402.048 73.556" space="preserve">
+                <svg fill="#ffffff" version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="125px" height="24px" viewBox="17.318 5.824 402.048 73.556" space="preserve">
                   <path d="M321.513,5.824H256.91v12.878h51.478l-49.294,44.581c-8.227,7.023-2.872,16.096,3.958,16.096h65.337V66.472
                     h-52.117l48.964-44.554C333.52,14.473,328.535,5.824,321.513,5.824"></path>
                   <rect x="226.517" y="5.824" width="14.426" height="73.556"></rect>
