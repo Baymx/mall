@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { Slider } from "@icedesign/base";
 
-export default class Rotation extends Component {
+export default class RotationSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -32,7 +32,7 @@ export default class Rotation extends Component {
       }
     ];
     return (
-      <div>
+      
         <Slider
           arrowSize="large"
           autoplay={true}
@@ -48,7 +48,7 @@ export default class Rotation extends Component {
             </div>
           ))}
         </Slider>
-      </div>
+      
     );
   }
 }
@@ -58,6 +58,6 @@ const styles = {
     overflow: "hidden"
   },
   slider: {
-    width: document.body.clientWidth + "px"
+    width: document.body.clientWidth+ 10 + "px"
   }
 };

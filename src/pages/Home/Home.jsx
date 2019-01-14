@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 // import SoftwareDownload from "./components/SoftwareDownload";
 // import ChangeLogs from "./components/ChangeLogs";
 import RotationSlider from "./components/RotationSlider";
+import SectionAd from "./components/SectionAd";
 
 export default class Home extends Component {
   static displayName = "Home";
@@ -56,6 +57,7 @@ export default class Home extends Component {
       <div className="home-page" style={styles.homepage}>
         <Header />
         <RotationSlider />
+        <SectionAd />
       </div>
     );
   }
