@@ -8,6 +8,7 @@ import Header from "../../components/Header";
 // import ChangeLogs from "./components/ChangeLogs";
 import RotationSlider from "./components/RotationSlider";
 import SectionAd from "./components/SectionAd";
+import ProductShowcase from "./components/ProductShowcase";
 
 export default class Home extends Component {
   static displayName = "Home";
@@ -58,6 +59,10 @@ export default class Home extends Component {
         <Header />
         <RotationSlider />
         <SectionAd />
+        <div >
+          <ProductShowcase/>
+        </div>
+       
       </div>
     );
   }
@@ -65,7 +70,10 @@ export default class Home extends Component {
 
 const styles = {
   homepage: {
-    background: "#fff",
+    background: "#f4f4f4",
     overflow: "hidden"
+  },
+  home:{
+    
   }
 };

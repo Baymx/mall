@@ -1,0 +1,49 @@
+.showcase{
+  .showcase-adv{
+    h3{
+      text-align: center;
+      font-size: 30px;
+      font-weight: 400;
+      margin-bottom:20px;
+      padding-top:20px;
+
+    }
+    a{
+      display: block;
+      height: 450px;
+      width: 100%;
+      img{
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .big-products{
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a{
+      display: block;
+      width: 615px;
+      span{
+
+      }
+      h3{
+
+      }
+      p{
+
+      }
+      img{
+        display: block;
+        height: 460px;
+        width: 460px;
+      }
+    }
+  }
+}
