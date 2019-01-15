@@ -12,7 +12,7 @@ export default class ProductShowcase extends Component {
         {
           List.map((item, index) => {
             return (
-              <a href={item.path}>
+              <a href={item.path} key={index}>
                 <span className={item.type}>{item.type == "fall" ? '直降' : item.type == "offer" ? "优惠" : ""} </span>
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
