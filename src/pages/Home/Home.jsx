@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Footer from "../../components/Footer";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 // import ProductFeature from "./components/ProductFeature";
 // import CustomMaterials from "./components/CustomMaterials";
@@ -62,7 +62,7 @@ export default class Home extends Component {
         <div >
           <ProductShowcase/>
         </div>
-       
+        <Footer />
       </div>
     );
   }
