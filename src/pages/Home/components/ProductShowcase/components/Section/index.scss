@@ -1,0 +1,111 @@
+.sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ul {
+    margin-top: 20px;
+    width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .sections-item {
+      height: 375px;
+      width: 300px;
+      background: #fff;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+
+      a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          display: block;
+          height: 230px;
+          margin-top: 30px;
+        }
+
+        .typeAdv {
+          height: 375px;
+          width: 300px;
+          margin-top: 0px;
+        }
+
+        .sections-item-info {
+          text-align: center;
+          margin-top: 10px;
+
+          .goods-name {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
+          }
+
+          .goods-desc {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 5px;
+          }
+
+          .goods-price {
+            position: relative;
+            display: inline-block;
+            color: #c00;
+            font-size: 22px;
+            // padding-left: 14px;
+            i{
+              font-style: normal;
+            }
+            s{
+              margin-left: 8px;
+              color: #999;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .sections-item-AdvInfo {
+          position: absolute;
+          top: 270px;
+          left: 0;
+          width: 100%;
+          text-align: center;
+
+          .goods-name {
+            color: #fff;
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 5px;
+          }
+
+          .goods-desc {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 5px;
+          }
+
+          .goods-price {
+            position: relative;
+            display: inline-block;
+            color: #c00;
+            font-size: 22px;
+            padding-left: 14px;
+            i{
+              font-style: normal;
+            }
+            s{
+              margin-left: 4px;
+              color: #fff;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
