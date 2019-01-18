@@ -1,0 +1,43 @@
+footer {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+
+  .footer-box {
+    width: 1240px;
+    position: relative;
+
+    .onlive-server {
+      float: right;
+      text-align: center;
+      span {
+        color: #999;
+        font-size: 12px;
+        line-height: 30px;
+      }
+
+      .tel {
+        color: #00c3f5;
+        font-size: 25px;
+        font-weight: 400;
+        margin-top: -6px;
+        line-height: 40px;
+      }
+
+      .onlive-btn {
+        height: 30px;
+        padding: 0 16px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        line-height: 30px;
+        color: #fff;
+        border-radius: 20px;
+        margin-top: 3px;
+        display: inline-block;
+        font-size: 14px;
+        background: #0bbbef;
+      }
+    }
+  }
+}

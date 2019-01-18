@@ -1,34 +1,30 @@
-import React from 'react';
-import Logo from '../Logo';
+import React, { Component } from "react";
 
-export default () => {
-  return (
-    <div
-      style={{
-        maxWidth: '1200px',
-        margin: '20px auto',
-        textAlign: 'center',
-        lineHeight: '36px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      }}
-    >
-      <div style={{ filter: 'grayscale(100%)', opacity: 0.3 }}>
-        <Logo isDark />
-      </div>
-      <div
-        style={{
-          color: '#999',
-          lineHeight: 1.5,
-          fontSize: 12,
-          textAlign: 'right',
-        }}
-      >
-        阿里巴巴集团
-        <br />
-        © 2018 版权所有
-      </div>
-    </div>
-  );
-};
+export default class Footer extends Component {
+  constructor(props) {
+    super(props);
+  }
+  renderFooterList = (data) => {
+    return (
+      data.map((item, index) => {
+
+      })
+    )
+  }
+
+  render() {
+    const data = [];
+    return (
+      <footer>
+        <div className="footer-box">
+          {this.renderFooterList(data)}
+          <div className="onlive-server">
+            <span>周一至周日 7:30-24:00</span>
+            <p className="tel">400-788-3333</p>
+            <a className="onlive-btn" href="http://url.meizu.com/ols_PC?click=store_index_bottom_service_online&amp;click=click_entrance_store_service" target="_blank">在线客服</a>
+          </div>
+        </div>
+      </footer>
+    );
+  }
+}
