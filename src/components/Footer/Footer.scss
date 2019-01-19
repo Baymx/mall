@@ -39,5 +39,20 @@ footer {
         background: #0bbbef;
       }
     }
+    .footer-service{
+      margin-top: 40px;
+      a{
+        display: block;
+        float: left;
+        height: 69px;
+        width: 150px;
+        text-align: center;
+        img{
+          display: inline-block;
+          width: 50px;
+          height: 39px;
+        }
+      }
+    }
   }
 }
