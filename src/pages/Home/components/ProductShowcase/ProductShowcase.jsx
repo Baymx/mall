@@ -86,7 +86,7 @@ export default class ProductShowcase extends Component {
         originalPrice: 3000,
         color: '#ebce6b',
         src:
-          "https://fms.res.meizu.com/dms/2018/12/14/e786c416-5129-495a-b7fb-d2ca90da6e74.jpg"
+          "https://openfile.meizu.com/group1/M00/06/CC/Cgbj0VvINL-AGM20AAw4GirVtYA698.png"
       },
       {
         name: "魅族 16 X",
@@ -289,6 +289,7 @@ export default class ProductShowcase extends Component {
       ]
 
     }
+    
     var { data } = this.props;
     return (
       <div className="showcase">

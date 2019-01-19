@@ -1,6 +1,5 @@
 /* eslint no-mixed-operators: 0 */
 import React, { Component } from "react";
-import { Item } from "../../../../../../../node_modules/@icedesign/menu";
 
 export default class Section extends Component {
   constructor(props) {
