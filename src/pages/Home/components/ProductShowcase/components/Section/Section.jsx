@@ -1,6 +1,7 @@
 /* eslint no-mixed-operators: 0 */
 import React, { Component } from "react";
-
+import { withRouter } from 'react-router-dom';
+@withRouter
 export default class Section extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,7 @@ export default class Section extends Component {
           List.map((item, index) => {
             return (
               <li className='sections-item' key={index}>
-                <a href={item.path}>
+                <a onClick= {this.sectionClick.bind(this,item)} >
                   <img src={item.src} className={item.typeAdvFlag ? 'typeAdv' : ''} />
                   {
                     item.typeAdvFlag ?
@@ -46,7 +47,13 @@ export default class Section extends Component {
       </ul>
     );
   }
+  sectionClick = (item) =>{
+    const { history } = this.props;
+    console.log(item)
+    console.log({ pathname : item.path , state : { id: item.id} })
 
+    history.push({ pathname : item.path , state : { id: item.id} })
+  }
   render() {
     var { data } = this.props;
     var { list } = data;

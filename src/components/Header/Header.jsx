@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Input, Balloon, Icon, Badge } from '@icedesign/base';
+import { withRouter } from 'react-router-dom';
 import Menu from '@icedesign/menu';
 import Logo from '../Logo';
 import ShopCar from '../ShopCar';
@@ -53,7 +54,7 @@ const MENUS = [
     ],
   },
 ];
-
+@withRouter
 export default class Header extends Component {
   constructor(props) {
     super(props);
@@ -100,12 +101,15 @@ export default class Header extends Component {
       }
       return (
         <Menu.Item key={index} className="">
-          <a href={menu.path}>{menu.name}</a>
+          <a onClick= {this.menuClick.bind(this,menu)}>{menu.name}</a>
         </Menu.Item>
       );
     });
   };
-
+  menuClick = (item)=>{
+    const { history } = this.props;
+    history.push(item.path)
+  }
   render() {
     return (
       <div className="header-container">

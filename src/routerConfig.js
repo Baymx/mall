@@ -4,6 +4,7 @@
 
 import BlankLayout from './layouts/BlankLayout';
 import Home from './pages/Home';
+import Phone from './pages/Phone';
 import NotFound from './pages/NotFound';
 
 const routerConfig = [
@@ -11,6 +12,11 @@ const routerConfig = [
     path: '/',
     layout: BlankLayout,
     component: Home,
+  },
+  {
+    path: '/phone',
+    layout: BlankLayout,
+    component: Phone,
   },
   {
     path: '*',

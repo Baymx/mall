@@ -1,7 +1,8 @@
 /* eslint no-mixed-operators: 0 */
 import React, { Component } from "react";
 import Section from './components/Section';
-
+import { withRouter } from 'react-router-dom';
+@withRouter
 export default class ProductShowcase extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +13,7 @@ export default class ProductShowcase extends Component {
       <div className="big-products">
         {List.map((item, index) => {
           return (
-            <a href={item.path} key={index}>
+            <a onClick= {this.sectionClick.bind(this,item)} key={index}>
               <span className={item.type}>
                 {item.type == "fall"
                   ? "直降"
@@ -54,6 +55,10 @@ export default class ProductShowcase extends Component {
     );
   }
 
+  sectionClick = (item) =>{
+    const { history } = this.props;
+    history.push(item.path)
+  }
   render() {
     const List = [
       {
@@ -154,6 +159,7 @@ export default class ProductShowcase extends Component {
           name: "POP 真无线蓝牙耳机",
           description: "POP 真无线蓝牙耳机",
           price: 399,
+          id: 1,
           type: "fall",
           path: "/phone",
           typeAdvFlag: true,
@@ -289,7 +295,7 @@ export default class ProductShowcase extends Component {
       ]
 
     }
-    
+
     var { data } = this.props;
     return (
       <div className="showcase">

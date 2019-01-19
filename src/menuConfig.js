@@ -4,6 +4,12 @@
 
 const headerMenuConfig = [];
 
-const asideMenuConfig = [];
+const asideMenuConfig = [
+  {
+    name: 'Phone',
+    path: '/phone',
+    icon: 'home',
+  },
+];
 
 export { headerMenuConfig, asideMenuConfig };

@@ -9,7 +9,7 @@ export default class Footer extends Component {
       <div className="footer-service">
         {data.map((item, index) => {
           return (
-            <a>
+            <a key={index}>
               <img src={item.src} alt="" />
               <p>{item.text}</p>
             </a>
