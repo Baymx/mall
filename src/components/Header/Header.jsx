@@ -64,7 +64,7 @@ export default class Header extends Component {
     };
   }
 
-  renderBalloonContent = (menu) => {
+  renderBalloonContent = (menu,color) => {
     return (
       <Menu.Item key={menu.name}>
         <Balloon
@@ -72,7 +72,7 @@ export default class Header extends Component {
           closable={false}
           triggerType="click"
           trigger={
-            <a>
+            <a  style = {{ color : color ? color : '' }}>
               {menu.name}{' '}
               <Icon
                 size="xxs"
@@ -94,14 +94,14 @@ export default class Header extends Component {
     );
   };
 
-  renderMenuItem = () => {
+  renderMenuItem = (color) => {
     return MENUS.map((menu, index) => {
       if (menu.children) {
-        return this.renderBalloonContent(menu);
+        return this.renderBalloonContent(menu,color);
       }
       return (
         <Menu.Item key={index} className="">
-          <a onClick= {this.menuClick.bind(this,menu)}>{menu.name}</a>
+          <a style = {{ color : color ? color : '' }} onClick= {this.menuClick.bind(this,menu)}>{menu.name}</a>
         </Menu.Item>
       );
     });
@@ -111,21 +111,22 @@ export default class Header extends Component {
     history.push(item.path)
   }
   render() {
+    const { color,logColor } = this.props;
     return (
       <div className="header-container">
         <div className="header-content">
-          <Logo />
+          <Logo logColor = {logColor} />
           <div className="header-navbar">
             <Menu className="header-navbar-menu" mode="horizontal">
-              {this.renderMenuItem()}
+              {this.renderMenuItem(color)}
             </Menu>
             <div className="header-search-input">
               <Input placeholder="全局搜索" />
             </div>
             <div>
-              <Icon type="account" style={{ color: "#fff", marginLeft: "20px", marginRight: "10px" }} />
+              <Icon type="account" style={{ color : color ? color : '#fff' , marginLeft: "20px", marginRight: "10px" }} />
             </div>
-            <ShopCar />
+            <ShopCar color={color}/>
           </div>
         </div>
       </div>

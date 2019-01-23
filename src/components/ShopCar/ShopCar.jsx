@@ -11,16 +11,18 @@ export default class ShopCar extends Component {
   }
   
   render() {
+    const { color } = this.props;
     const shopcar = (
       <a href="/shopCar" style={{ display: "block", position: "relative" }}  id="shopcar">
           <Badge count={this.state.count}>
             <Icon
               type="cart"
-              style={{ color: "#fff", marginLeft: "20px", marginRight: "10px" }}
+              style={{ color : color ? color : '#fff', marginLeft: "20px", marginRight: "10px" }}
             />
           </Badge>
         </a>
     );
+    
     return (
       <div
         style={{

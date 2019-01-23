@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import ExcellentHomePage from './components/ExcellentHomePage';
 
 export default class Phone extends Component {
@@ -12,7 +14,10 @@ export default class Phone extends Component {
   render() {
     return (
       <div className="phone-page">
-        <ExcellentHomePage />
+      <div className="header">
+        <Header color = '#333' logColor = '#00c3f5' />
+      </div>
+        <Footer />
       </div>
     );
   }
