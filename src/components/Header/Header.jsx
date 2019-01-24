@@ -45,12 +45,7 @@ const MENUS = [
       {
         name: '知乎专栏',
         path: 'https://zhuanlan.zhihu.com/ice-design',
-      },
-      {
-        name: '万能群',
-        path:
-          require('./images/ice-group.png'),
-      },
+      }
     ],
   },
 ];
