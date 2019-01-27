@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Goods from "./components/Goods";
+import Goods from "./components/Goods";
 
 
 export default class ShowGoods extends Component {
@@ -15,7 +15,7 @@ export default class ShowGoods extends Component {
               <span>价格</span>
             </div>
           </div>
-          {/* <Goods /> */}
+          <Goods />
         </div>
       </div>
     );
