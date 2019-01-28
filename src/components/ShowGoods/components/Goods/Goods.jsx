@@ -3,11 +3,14 @@ import Show from "./components/Show"
 
 export default class Goods extends Component {
   render() {
+    const { goodList } = this.props || {};
     return (
       <div className="goods">
-      <Show />
-      <Show />
-      <Show />
+      {
+        goodList && goodList.map((item,index)=>{
+          return(<Show goodsInfo = {item} key={index}/>)
+        })
+      }
       </div>
     );
   }

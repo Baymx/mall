@@ -11,6 +11,7 @@
   padding-bottom: 28px;
   max-height: 556px;
   text-align: center;
+  text-decoration: none;
 
   .item-hot-sale {
     position: absolute;
@@ -35,11 +36,88 @@
     background-color: #ff3149;
     background-image: linear-gradient(120deg, #ff3149, #ff64a6);
   }
+
+  .blue {
+    background-color: #2e74f6;
+    background-image: linear-gradient(120deg, #2e74f6, #56bdf9);
+  }
+
   .item-pic {
     display: block;
     width: 80%;
     margin: 0 auto;
     min-height: 320px;
     max-width: 320px;
-}
+  }
+
+  .item-slide {
+    display: inline-block;
+    min-height: 20px;
+    margin: 10px 0;
+
+    li {
+      float: left;
+      margin-left: 10px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px #ccc solid;
+      position: relative;
+
+      img {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        cursor:pointer;
+      }
+    }
+  }
+
+  .item-title {
+    padding: 0 12px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 23px;
+    color: #333;
+  }
+
+  .item-desc {
+    display: inline-block;
+    margin: 5px auto;
+    color: #666;
+    text-align: center;
+    min-height: 24px;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 270px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .item-price {
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #c00;
+
+    em {
+      font-size: 16px;
+    }
+
+    .vm-price {
+      font-size: 26px;
+    }
+  }
 }
