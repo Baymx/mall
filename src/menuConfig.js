@@ -10,6 +10,11 @@ const asideMenuConfig = [
     path: '/phone',
     icon: 'home',
   },
+  {
+    name: 'detail',
+    path: '/detail/:id',
+    icon: 'home',
+  },
 ];
 
 export { headerMenuConfig, asideMenuConfig };
