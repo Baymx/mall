@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Goods from "./components/Goods";
-
-
 export default class ShowGoods extends Component {
   render() {
   const goodList = [
@@ -9,6 +7,7 @@ export default class ShowGoods extends Component {
       activityName: "限时券",
       activityColor: "yellow",
       path: '/detail',
+      id: 1,
       slideList: [
         {
           slideBg: 'http://openfile.meizu.com/group1/M00/06/FD/Cgbj0Vw0T3SActowAAAJazF5kdU066.png',
@@ -31,6 +30,7 @@ export default class ShowGoods extends Component {
       activityName: "限时券",
       activityColor: "yellow",
       path: '/detail',
+      id: 2,
       slideList: [
         {
           slideBg: 'http://openfile.meizu.com/group1/M00/06/FD/Cgbj0Vw0T3SActowAAAJazF5kdU066.png',
@@ -53,6 +53,7 @@ export default class ShowGoods extends Component {
       activityName: "限时券",
       activityColor: "yellow",
       path: '/detail',
+      id: 3,
       slideList: [
         {
           slideBg: 'http://openfile.meizu.com/group1/M00/06/FD/Cgbj0Vw0T3SActowAAAJazF5kdU066.png',
@@ -75,6 +76,7 @@ export default class ShowGoods extends Component {
       activityName: "限时券",
       activityColor: "yellow",
       path: '/detail',
+      id: 4,
       slideList: [
         {
           slideBg: 'http://openfile.meizu.com/group1/M00/06/FD/Cgbj0Vw0T3SActowAAAJazF5kdU066.png',

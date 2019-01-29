@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router-dom';
+@withRouter
 export default class Show extends Component {
   constructor(props) {
     super(props);
@@ -6,13 +8,20 @@ export default class Show extends Component {
       item: {}
     };
   }
-  slideClick = loction => {
+  slideClick = (loction,e) => {
+    e.stopPropagation()
+    e.nativeEvent.stopImmediatePropagation();
     const { item } = this.state || {};
     item &&  item.showPic ? item.showPic = loction : '';
     this.setState({
       item: item
     });
   };
+  goodsClick = item =>{
+    console.log(item)
+    const { history } = this.props;
+    history.push(`${item.path}/${item.id}`)
+  }
   componentDidMount() {
     const { goodsInfo } = this.props || {};
     if(goodsInfo){
@@ -30,7 +39,7 @@ export default class Show extends Component {
     const { item } = this.state || {};
     return (
       <div>
-        <a className="Show">
+        <a onClick = {this.goodsClick.bind(this,item)} className="Show">
           <p className={`item-hot-sale ${item.activityColor}`}>
             {item.activityName}
           </p>
@@ -41,7 +50,7 @@ export default class Show extends Component {
                 return (
                   <li key={index}>
                     <img
-                      onClick={this.slideClick.bind(this, element.goodsLoction)}
+                      onClick={ this.slideClick.bind(this,element.goodsLoction) }
                       src={element.slideBg}
                       data-imgsrc={element.goodsLoction}
                       alt=""
