@@ -49,10 +49,7 @@ export default class Section extends Component {
   }
   sectionClick = (item) =>{
     const { history } = this.props;
-    console.log(item)
-    console.log({ pathname : item.path , state : { id: item.id} })
-
-    history.push({ pathname : item.path , state : { id: item.id} })
+    history.push(`${item.path}/${item.id}`)
   }
   render() {
     var { data } = this.props;

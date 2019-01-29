@@ -13,13 +13,9 @@ export default class ProductShowcase extends Component {
       <div className="big-products">
         {List.map((item, index) => {
           return (
-            <a onClick= {this.sectionClick.bind(this,item)} key={index}>
-              <span className={item.type}>
-                {item.type == "fall"
-                  ? "直降"
-                  : item.type == "offer"
-                    ? "优惠"
-                    : ""}
+            <a onClick={this.sectionClick.bind(this, item)} key={index}>
+              <span className={item.activityColor}>
+                {item.activityName}
               </span>
               <div className='h2'>{item.name}</div>
               <div className='p'>{item.description}</div>
@@ -37,12 +33,8 @@ export default class ProductShowcase extends Component {
         {List.map((item, index) => {
           return (
             <a href={item.path} key={index}>
-              <span className={item.type}>
-                {item.type == "fall"
-                  ? "直降"
-                  : item.type == "offer"
-                    ? "优惠"
-                    : ""}
+              <span className={item.activityColor}>
+                {item.activityName}
               </span>
               <img src={item.src} alt="" />
               <div className='h2'>{item.name}</div>
@@ -55,9 +47,9 @@ export default class ProductShowcase extends Component {
     );
   }
 
-  sectionClick = (item) =>{
+  sectionClick = (item) => {
     const { history } = this.props;
-    history.push(item.path)
+    history.push(`${item.path}/${item.id}`)
   }
   render() {
     const List = [
@@ -65,8 +57,10 @@ export default class ProductShowcase extends Component {
         name: "魅族 16th",
         description: "骁龙845 AI加速 屏幕下指纹 AI双摄光学防抖",
         price: 2498,
-        type: "fall",
-        path: "/phone",
+        path: '/detail',
+        id: "00001",
+        activityName: "限时券",
+        activityColor: "yellow",
         src:
           "https://openfile.meizu.com/group1/M00/05/F1/Cgbj0VtqgmyADfzUAAdk_Uz-jKk371.png"
       },
@@ -74,8 +68,10 @@ export default class ProductShowcase extends Component {
         name: "魅族 16 X",
         description: "高通骁龙710 屏幕下指纹 旗舰双摄",
         price: 1798,
-        type: "offer",
-        path: "/phone",
+        path: '/detail',
+        id: "00002",
+        activityName: "限时券",
+        activityColor: "yellow",
         src:
           "https://openfile.meizu.com/group1/M00/06/CC/Cgbj0VvINL-AGM20AAw4GirVtYA698.png"
       }
@@ -85,8 +81,10 @@ export default class ProductShowcase extends Component {
         name: "魅族 16th",
         description: "骁龙845 AI加速 屏幕下指纹 AI双摄光学防抖",
         price: 2498,
-        type: "fall",
-        path: "/phone",
+        path: '/detail',
+        id: "00003",
+        activityName: "领卷",
+        activityColor: "blue",
         typeAdvFlag: true,
         originalPrice: 3000,
         color: '#ebce6b',
@@ -97,8 +95,10 @@ export default class ProductShowcase extends Component {
         name: "魅族 16 X",
         description: "高通骁龙710 屏幕下指纹 旗舰双摄",
         price: 1798,
-        type: "offer",
-        path: "/phone",
+        activityName: "热卖",
+        activityColor: "red",
+        path: '/detail',
+        id: "00003",
         src:
           "https://openfile.meizu.com/group1/M00/06/CC/Cgbj0VvINL-AGM20AAw4GirVtYA698.png"
       },
@@ -106,8 +106,10 @@ export default class ProductShowcase extends Component {
         name: "魅族 16th",
         description: "骁龙845 AI加速 屏幕下指纹 AI双摄光学防抖",
         price: 2498,
-        type: "fall",
-        path: "/phone",
+        activityName: "领卷",
+        activityColor: "blue",
+        path: '/detail',
+        id: "00003",
         src:
           "https://openfile.meizu.com/group1/M00/05/F1/Cgbj0VtqgmyADfzUAAdk_Uz-jKk371.png"
       },
@@ -116,7 +118,10 @@ export default class ProductShowcase extends Component {
         description: "高通骁龙710 屏幕下指纹 旗舰双摄",
         price: 1798,
         type: "offer",
-        path: "/phone",
+        activityName: "领卷",
+        activityColor: "blue",
+        path: '/detail',
+        id: "00003",
         src:
           "https://openfile.meizu.com/group1/M00/06/CC/Cgbj0VvINL-AGM20AAw4GirVtYA698.png"
       },
@@ -124,8 +129,10 @@ export default class ProductShowcase extends Component {
         name: "魅族 16th",
         description: "骁龙845 AI加速 屏幕下指纹 AI双摄光学防抖",
         price: 2498,
-        type: "fall",
-        path: "/phone",
+        activityName: "热卖",
+        activityColor: "red",
+        path: '/detail',
+        id: "00003",
         src:
           "https://openfile.meizu.com/group1/M00/05/F1/Cgbj0VtqgmyADfzUAAdk_Uz-jKk371.png"
       },
@@ -133,8 +140,10 @@ export default class ProductShowcase extends Component {
         name: "魅族 16 X",
         description: "高通骁龙710 屏幕下指纹 旗舰双摄",
         price: 1798,
-        type: "offer",
-        path: "/phone",
+        activityName: "领卷",
+        activityColor: "blue",
+        path: '/detail',
+        id: "00003",
         src:
           "https://openfile.meizu.com/group1/M00/06/CC/Cgbj0VvINL-AGM20AAw4GirVtYA698.png"
       },
@@ -142,15 +151,17 @@ export default class ProductShowcase extends Component {
         name: "魅族 16th",
         description: "骁龙845 AI加速 屏幕下指纹 AI双摄光学防抖",
         price: 2498,
-        type: "fall",
-        path: "/phone",
+        activityName: "领卷",
+        activityColor: "blue",
+        path: '/detail',
+        id: "00003",
         src:
           "https://openfile.meizu.com/group1/M00/05/F1/Cgbj0VtqgmyADfzUAAdk_Uz-jKk371.png"
       }
     ];
     const voiceData = {
       sectionAdv: {
-        sectionName : '魅族声学',
+        sectionName: '魅族声学',
         path: './voice',
         src: 'https://fms.res.meizu.com/dms/2018/10/23/89d0ea78-27bd-4e9d-8a50-db02395d7ee4.jpg'
       },
@@ -161,7 +172,8 @@ export default class ProductShowcase extends Component {
           price: 399,
           id: 1,
           type: "fall",
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           typeAdvFlag: true,
           originalPrice: 499,
           color: '#ebce6b',
@@ -175,7 +187,8 @@ export default class ProductShowcase extends Component {
           originalPrice: 999,
           type: "offer",
           typeAdvFlag: false,
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           color: '',
           src:
             "https://openfile.meizu.com/group1/M00/04/17/Cgbj0VrcX6yABHxPAARZwWUAjc4748.png"
@@ -185,7 +198,8 @@ export default class ProductShowcase extends Component {
           description: "",
           price: 399,
           type: "fall",
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           typeAdvFlag: false,
           originalPrice: 599,
           color: '',
@@ -199,7 +213,8 @@ export default class ProductShowcase extends Component {
           originalPrice: 229,
           typeAdvFlag: false,
           type: "offer",
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           color: '',
           src:
             "https://storeimg.meizu.com/product/1459849377-64075.png"
@@ -211,7 +226,8 @@ export default class ProductShowcase extends Component {
           originalPrice: '',
           type: "fall",
           typeAdvFlag: true,
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           color: '#00fefb',
           src:
             "https://fms.res.meizu.com/dms/2018/12/14/4a466aec-1717-48b5-a0bd-7b921ad2a338.jpg"
@@ -222,7 +238,8 @@ export default class ProductShowcase extends Component {
           price: 99,
           originalPrice: 199,
           type: "offer",
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           typeAdvFlag: false,
           src:
             "https://openfile.meizu.com/group1/M00/06/20/Cgbj0Ft-WkOAAhCKAAFqcNe6c3M482.png"
@@ -233,7 +250,8 @@ export default class ProductShowcase extends Component {
           price: 69,
           originalPrice: 129,
           type: "fall",
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           typeAdvFlag: false,
           src:
             "https://openfile.meizu.com/group1/M00/05/F1/Cgbj0VtqgmyADfzUAAdk_Uz-jKk371.png"
@@ -243,7 +261,8 @@ export default class ProductShowcase extends Component {
           price: 199,
           originalPrice: '',
           type: "fall",
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           typeAdvFlag: false,
           src:
             "https://openfile.meizu.com/group1/M00/00/A2/Cix_s1gcVpeAOmoaAAGh-ubroNg891.png"
@@ -255,7 +274,8 @@ export default class ProductShowcase extends Component {
           originalPrice: 1299,
           type: "fall",
           typeAdvFlag: true,
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           color: '#00fefb',
           src:
             "https://fms.res.meizu.com/dms/2018/12/14/ea900393-0119-4f34-87c1-0770a22a84a1.jpg"
@@ -266,7 +286,8 @@ export default class ProductShowcase extends Component {
           price: 429,
           originalPrice: 599,
           type: "offer",
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           typeAdvFlag: false,
           src:
             "https://openfile.meizu.com/group1/M00/01/BC/Cgbj0Vl22XGAC6YIAAGautlHsjo741.png"
@@ -277,7 +298,8 @@ export default class ProductShowcase extends Component {
           price: 199,
           originalPrice: '',
           type: "fall",
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           typeAdvFlag: false,
           src:
             "https://openfile.meizu.com/group1/M00/01/D5/Cgbj0VmRZCiAKwA3AADYrtiPJlQ156.png"
@@ -287,7 +309,8 @@ export default class ProductShowcase extends Component {
           price: 89,
           originalPrice: 169,
           type: "fall",
-          path: "/phone",
+          path: '/detail',
+          id: "00003",
           typeAdvFlag: false,
           src:
             "https://openfile.meizu.com/group1/M00/01/1D/Cix_s1ij7KeAdy0cAAbboUvsAC4250.png"
