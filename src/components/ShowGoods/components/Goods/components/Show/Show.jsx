@@ -59,8 +59,8 @@ export default class Show extends Component {
                 );
               })}
           </ul>
-          <h3 className="item-title">{item.title}</h3>
-          <p className="item-desc">{item.desc}</p>
+          <h3 className="item-title">{item.name}</h3>
+          <p className="item-desc">{item.description}</p>
           <p className="item-price">
             <em>￥</em>
             <span className="vm-price">{item.price}</span>

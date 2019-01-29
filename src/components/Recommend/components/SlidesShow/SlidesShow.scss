@@ -1,0 +1,56 @@
+.slides-show {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  height: 429px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+
+  .next-slick-dots.hoz {
+    bottom: -40px;
+  }
+
+  .slides-box {
+    .slides-item {
+      display: block;
+      height: 429px;
+      width: 310px;
+      display: block;
+      padding-top: 40px;
+      padding-bottom: 44px;
+
+      .slides-item-img {
+        width: 230px;
+        margin: 0 auto;
+        border-style: none;
+      }
+
+      .slides-item-desc {
+        margin-top: 36px;
+        text-align: center;
+
+        .slides-item-title {
+          font-size: 21px;
+          color: #2b2b2b;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .slides-item-price {
+          margin-top: 8px;
+          font-size: 16px;
+          color: #c00;
+          height: 40px;
+          line-height: 40px;
+
+          .slides-item-text {
+            font-size: 27px;
+          }
+        }
+
+      }
+
+    }
+  }
+}
