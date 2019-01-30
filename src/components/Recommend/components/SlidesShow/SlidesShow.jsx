@@ -6,20 +6,20 @@ export default class SlidesShow extends Component {
 
   }
   render() {
-    const { arr } = this.props || {};
+    const { list } = this.props || {};
     return (
       <div className="slides-show">
         <Slider className="slides-box" slidesToShow={4} slidesToScroll={4} arrows={false}  >
           {
-           arr && arr.map((item, index) => {
+           list && list.map((item, index) => {
               console.log(item)
               return (
                 <a key={index} className="slides-item" href="">
-                  <img className="slides-item-img" src="//openfile.meizu.com/group1/M00/04/15/Cgbj0VrcXw2AL0tBAApTh_xwKKk709.png@480x480.jpg" />
+                  <img className="slides-item-img" src={item.src} />
                   <div className="slides-item-desc">
-                    <h4 className="slides-item-title">魅族无线充电器</h4>
+                    <h4 className="slides-item-title">{item.name}</h4>
                     <p className="slides-item-price">
-                      <span>￥</span><span className="slides-item-text">99</span>
+                      <span>￥</span><span className="slides-item-text">{item.price}</span>
                     </p>
                   </div>
                 </a>
