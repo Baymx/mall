@@ -6,6 +6,7 @@ import BlankLayout from './layouts/BlankLayout';
 import Home from './pages/Home';
 import Phone from './pages/Phone';
 import Detail from './pages/Detail';
+import Acoustics from './pages/Acoustics';
 import NotFound from './pages/NotFound';
 
 const routerConfig = [
@@ -23,6 +24,11 @@ const routerConfig = [
     path: '/detail/:id',
     layout: BlankLayout,
     component: Detail,
+  },
+  {
+    path: '/acoustics',
+    layout: BlankLayout,
+    component: Acoustics,
   },
   {
     path: '*',

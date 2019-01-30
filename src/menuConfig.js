@@ -15,6 +15,11 @@ const asideMenuConfig = [
     path: '/detail/:id',
     icon: 'home',
   },
+  {
+    name: 'acoustics',
+    path: '/acoustics',
+    icon: 'home',
+  },
 ];
 
 export { headerMenuConfig, asideMenuConfig };
