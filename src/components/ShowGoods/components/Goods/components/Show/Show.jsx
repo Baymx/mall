@@ -17,8 +17,7 @@ export default class Show extends Component {
       item: item
     });
   };
-  goodsClick = item =>{
-    console.log(item)
+  goodsClick = item =>{    
     const { history } = this.props;
     history.push(`${item.path}/${item.id}`)
   }

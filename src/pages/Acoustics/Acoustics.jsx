@@ -258,6 +258,7 @@ export default class Acoustics extends Component {
         },
       ]
     };
+    console.log(this.props)
     return (
       <div className="acoustics-page">
         <div className="header" style={styles.header}>

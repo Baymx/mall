@@ -12,7 +12,6 @@ export default class SlidesShow extends Component {
         <Slider className="slides-box" slidesToShow={4} slidesToScroll={4} arrows={false}  >
           {
            list && list.map((item, index) => {
-              console.log(item)
               return (
                 <a key={index} className="slides-item" href="">
                   <img className="slides-item-img" src={item.src} />
