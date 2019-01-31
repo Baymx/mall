@@ -17,6 +17,7 @@ export default class Phone extends Component {
         src: "https://openfile.meizu.com/group1/M00/06/F1/Cgbj0FxBOImANlnVAAw4W7hGyw4785.jpg",
         path: "/phone"
       },
+      title :'手机',
       goodList: [
         {
           activityName: "限时券",
@@ -164,7 +165,7 @@ export default class Phone extends Component {
           <Header color='#333' logColor='#00c3f5' />
         </div>
         <Banner src={phoneData.banner.src} />
-        <ShowGoods goodList={phoneData.goodList} />
+        <ShowGoods goodList={phoneData.goodList} title ={ phoneData.title} />
         <div className="compare">
           <img src="https://openfile.meizu.com/group1/M00/06/F0/Cgbj0Fw-0c2AJlWqAAXXkghlwcI540.jpg" alt="" />
         </div>
