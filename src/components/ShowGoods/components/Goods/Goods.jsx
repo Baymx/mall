@@ -3,7 +3,7 @@ import Show from "./components/Show"
 
 export default class Goods extends Component {
   render() {
-    const { goodList } = this.props || {};
+    const { goodList = [] } = this.props || {};
     return (
       <div className="goods">
       {

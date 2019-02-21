@@ -31,6 +31,8 @@ export default class RotationSlider extends Component {
           "https://fms.res.meizu.com/dms/2018/12/29/38df385d-0f54-44d1-a0c1-485d360e8d56.jpg",
       }
     ];
+    const { sliderList } = this.props || {}; 
+    console.log(sliderList)
     return (
       
         <Slider
@@ -38,7 +40,7 @@ export default class RotationSlider extends Component {
           autoplay={true}
           arrows={false}
         >
-          {bigSlides.map((item, index) => (
+          {sliderList && sliderList.map((item, index) => (
             <div
               key={index}
               className="slider-img-wrapper"

@@ -11,7 +11,7 @@ export default class Section extends Component {
     return (
       <ul>
         {
-          List.map((item, index) => {
+         List &&  List.map((item, index) => {
             return (
               <li className='sections-item' key={index}>
                 <a onClick= {this.sectionClick.bind(this,item)} >
@@ -52,16 +52,14 @@ export default class Section extends Component {
     history.push(`${item.path}/${item.id}`)
   }
   render() {
-    var { data } = this.props;
-    var { list } = data;
-    var { sectionAdv } = data;
+    var { list = [] ,sectionAdv={} } = this.props.data || {};
     return (
       <div className="sections">
         <div className="showcase-adv">
-          <h3>{sectionAdv.sectionName}</h3>
-          <a href={sectionAdv.path}>
+          <h3>{sectionAdv.sectionName ? sectionAdv.sectionName : ''}</h3>
+          <a href={sectionAdv.path ? sectionAdv.path : ''}>
             <img
-              src={sectionAdv.src}
+              src={sectionAdv.src ? sectionAdv.src : ''}
               alt=""
             />
           </a>
