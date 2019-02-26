@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 export default class Detail extends Component {
   static displayName = 'Detail';
@@ -11,7 +13,9 @@ export default class Detail extends Component {
   render() {
     return (
       <div className="detail-page">
-      详情页面
+        <div className="header">
+          <Header color='#333' logColor='#00c3f5' />
+        </div>
       </div>
     );
   }
